@@ -1,0 +1,35 @@
+{
+  "name": "gohighlevel-axi",
+  "version": "0.1.0",
+  "description": "AXI-compliant CLI for GoHighLevel (LeadConnector): contacts, conversations, calendars, opportunities, payments, and workflows, with dry-run/--confirm gates on every send, trigger, charge, or delete.",
+  "type": "module",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ardaatahan/gohighlevel-axi.git"
+  },
+  "bin": {
+    "gohighlevel-axi": "bin/gohighlevel-axi.js"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "files": [
+    "bin",
+    "dist",
+    "skills",
+    "README.md"
+  ],
+  "scripts": {
+    "build": "tsc",
+    "pretest": "npm run build",
+    "test": "vitest run",
+    "skill:gen": "node scripts/gen-skill.mjs",
+    "skill:check": "node scripts/gen-skill.mjs --check"
+  },
+  "devDependencies": {
+    "@types/node": "^22.10.0",
+    "typescript": "^5.6.0",
+    "vitest": "^2.1.0"
+  }
+}
