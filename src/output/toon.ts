@@ -40,7 +40,7 @@ export function emitBlock(name: string, lines: string[]): string {
 }
 
 export function emitKV(pairs: Array<[string, unknown]>): string {
-  return pairs.map(([k, v]) => `${k}: ${toonValue(v) === "" ? "" : String(v)}`.trimEnd()).join("\n");
+  return pairs.map(([k, v]) => `${k}: ${toonValue(v)}`.trimEnd()).join("\n");
 }
 
 /**
